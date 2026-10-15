@@ -1,86 +1,74 @@
 <!DOCTYPE html>
-<html lang="en" id="htmlTag">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>I LOVE FILES - All Tools in One Place</title>
+<title>I Love Files - 100% Free Online File Suite</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<style>
+*{font-family:'Inter',sans-serif}
+.hero-gradient{background: linear-gradient(180deg,#f8f7ff 0%, #fefefe 100%);}
+.tool-card:hover{transform: translateY(-4px); box-shadow: 0 12px 32px -12px rgba(124,58,237,0.25);}
+</style>
 </head>
-<body class="bg-gray-50">
-<!-- Header -->
-<header class="bg-white shadow p-4 flex justify-between items-center">
-  <h1 class="text-2xl font-bold">I <span class="text-red-500">?</span> FILES</h1>
-  <div>
-    <button onclick="setLang('en')" class="px-3 py-1 border rounded">English</button>
-    <button onclick="setLang('ur')" class="px-3 py-1 border rounded">????</button>
-  </div>
+<body class="bg-white text-zinc-900 antialiased">
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-zinc-100">
+<div class="max-w-[1280px] mx-auto px-6 h-[64px] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-xl bg-zinc-900 flex items-center justify-center text-white font-bold">✦</div>
+<div><div class="font-bold text-[15px] leading-none flex items-center gap-1">I Love Files <span class="text-[12px]">✨</span></div><div class="text-[10px] text-zinc-500 font-medium tracking-widest mt-0.5">100% FREE ONLINE FILE SUITE</div></div>
+</div>
+<nav class="hidden lg:flex items-center gap-6 text-[13.5px] font-medium">
+<a href="#" class="flex items-center gap-1">📄 PDF Tools ▾</a>
+<a href="#" class="flex items-center gap-1">🖼️ Image Tools ▾</a>
+<a href="#" class="flex items-center gap-1">🎬 Video Tools ▾</a>
+<a href="#">About Us</a>
+<a href="#">Contact Us</a>
+<a href="#">Blog</a>
+</nav>
+<button class="w-9 h-9 rounded-xl border border-zinc-200 flex items-center justify-center">◐</button>
+</div>
 </header>
 
-<!-- Hero -->
-<div class="text-center py-8">
-  <h2 id="hero_title" class="text-3xl font-bold">All Document Tools in One Place</h2>
-  <p id="hero_desc" class="text-gray-500 mt-2">PDF, Word, Excel, Image, ZIP - Sab kuch ek jagah</p>
+<section class="hero-gradient pt-20 pb-10">
+<div class="max-w-[1280px] mx-auto px-6 text-center">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-violet-100 text-[12px] font-medium text-violet-600 shadow-sm">✨ 100% Free • No Registration Required • Runs Directly in Browser</div>
+<h1 class="mt-10 font-black tracking-tight leading-[0.9]"><span class="block text-[72px] lg:text-[92px] text-left max-w-[900px] mx-auto">All-In-One</span><span class="block text-[72px] lg:text-[92px] text-right max-w-[900px] mx-auto">Workspace</span></h1>
+<p class="mt-6 max-w-[560px] mx-auto text-[15px] leading-[1.6] text-zinc-500">Process unlimited files locally without uploading to server. Compress, convert, merge, and edit instantly with zero limits.</p>
+<a href="#tools" class="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-zinc-900 text-white text-[14px] font-semibold shadow-[0_0_0_8px_rgba(0,0,0,0.05),0_8px_24px_-8px_rgba(124,58,237,0.5)] hover:bg-black transition">Explore All Free Tools →</a>
+</div>
+</section>
+
+<section id="tools" class="max-w-[1280px] mx-auto px-6 py-16">
+<div class="mb-10"><h2 class="text-[22px] font-bold flex items-center gap-2"><span class="w-8 h-8 rounded-lg bg-pink-100 text-pink-600 flex items-center justify-center text-[14px]">🖼️</span> Image Processing Tools</h2><p class="text-[13px] text-zinc-500 mt-1">Compress, convert and edit images directly in your browser</p></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="tool-card bg-white border border-zinc-100 rounded-[20px] p-5 transition-all"><div class="w-10 h-10 rounded-xl bg-violet-100 flex items-center justify-center">🗜️</div><h3 class="mt-4 font-semibold text-[14px]">Compress Image</h3><p class="mt-1 text-[12px] text-zinc-500">Reduce image size without losing quality</p></div>
+<div class="tool-card bg-white border border-zinc-100 rounded-[20px] p-5 transition-all"><div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center">🔄</div><h3 class="mt-4 font-semibold text-[14px]">Image Converter</h3><p class="mt-1 text-[12px] text-zinc-500">Convert to JPG, PNG, WebP, AVIF</p></div>
+<div class="tool-card bg-white border border-zinc-100 rounded-[20px] p-5 transition-all"><div class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center">📐</div><h3 class="mt-4 font-semibold text-[14px]">Resize Image</h3><p class="mt-1 text-[12px] text-zinc-500">Resize images to any dimension</p></div>
+<div class="tool-card bg-white border border-zinc-100 rounded-[20px] p-5 transition-all"><div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center">✂️</div><h3 class="mt-4 font-semibold text-[14px]">Crop Image</h3><p class="mt-1 text-[12px] text-zinc-500">Crop images precisely</p></div>
 </div>
 
-<!-- Tools Grid -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 max-w-6xl mx-auto">
-
-  <!-- PDF Tools -->
-  <div class="bg-white p-5 rounded-xl shadow">
-    <h3 class="font-bold mb-3" id="cat_pdf">PDF Tools</h3>
-    <input type="file" id="pdfFiles" multiple accept=".pdf" class="mb-2 w-full">
-    <button onclick="mergePDF()" class="w-full bg-black text-white py-2 rounded mb-2" id="btn_merge">Merge PDF</button>
-    <button onclick="splitPDF()" class="w-full bg-gray-800 text-white py-2 rounded mb-2">Split PDF</button>
-    <button onclick="rotatePDF()" class="w-full bg-gray-800 text-white py-2 rounded">Rotate PDF</button>
-  </div>
-
-  <!-- Image Tools -->
-  <div class="bg-white p-5 rounded-xl shadow">
-    <h3 class="font-bold mb-3" id="cat_img">Image Tools</h3>
-    <input type="file" id="imgFile" accept="image/*" class="mb-2 w-full">
-    <select id="imgFormat" class="w-full border p-2 rounded mb-2">
-      <option value="png">JPG ? PNG</option>
-      <option value="jpeg">PNG ? JPG</option>
-      <option value="webp">? WebP</option>
-    </select>
-    <button onclick="convertImage()" class="w-full bg-black text-white py-2 rounded mb-2" id="btn_convert">Convert</button>
-    <button onclick="compressImage()" class="w-full bg-gray-800 text-white py-2 rounded">Compress & Resize</button>
-  </div>
-
-  <!-- ZIP Tools -->
-  <div class="bg-white p-5 rounded-xl shadow">
-    <h3 class="font-bold mb-3">ZIP Tools</h3>
-    <input type="file" id="zipFiles" multiple class="mb-2 w-full">
-    <button onclick="createZIP()" class="w-full bg-black text-white py-2 rounded mb-2" id="btn_zip">Create ZIP</button>
-    <input type="file" id="unzipFile" accept=".zip" class="mb-2 w-full">
-    <button onclick="extractZIP()" class="w-full bg-gray-800 text-white py-2 rounded">Extract ZIP</button>
-  </div>
-
-  <!-- Excel/Word -->
-  <div class="bg-white p-5 rounded-xl shadow">
-    <h3 class="font-bold mb-3">Excel & Word Tools</h3>
-    <input type="file" id="excelFile" accept=".xlsx,.csv,.docx" class="mb-2 w-full">
-    <button onclick="excelToCSV()" class="w-full bg-black text-white py-2 rounded mb-2">Excel ? CSV</button>
-    <button onclick="wordToPDF()" class="w-full bg-gray-800 text-white py-2 rounded">Word ? PDF / TXT ? PDF</button>
-  </div>
-
-  <!-- Other Tools -->
-  <div class="bg-white p-5 rounded-xl shadow">
-    <h3 class="font-bold mb-3">Other Tools</h3>
-    <textarea id="qrText" placeholder="Text for QR Code" class="w-full border p-2 rounded mb-2"></textarea>
-    <button onclick="makeQR()" class="w-full bg-black text-white py-2 rounded mb-2">QR Generator</button>
-    <div id="qrcode" class="flex justify-center"></div>
-    <hr class="my-3">
-    <textarea id="wordCountText" placeholder="Paste text to count words" class="w-full border p-2 rounded"></textarea>
-    <p id="countResult" class="text-sm mt-1">Words: 0</p>
-  </div>
-
+<div class="mt-14 mb-10"><h2 class="text-[22px] font-bold flex items-center gap-2"><span class="w-8 h-8 rounded-lg bg-red-100 text-red-600 flex items-center justify-center text-[14px]">📄</span> PDF Tools</h2></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="tool-card bg-white border border-zinc-100 rounded-[20px] p-5"><div class="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center">🔗</div><h3 class="mt-4 font-semibold text-[14px]">Merge PDF</h3><p class="mt-1 text-[12px] text-zinc-500">Combine multiple PDFs into one</p></div>
+<div class="tool-card bg-white border border-zinc-100 rounded-[20px] p-5"><div class="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center">✂️</div><h3 class="mt-4 font-semibold text-[14px]">Split PDF</h3><p class="mt-1 text-[12px] text-zinc-500">Split PDF into multiple files</p></div>
+<div class="tool-card bg-white border border-zinc-100 rounded-[20px] p-5"><div class="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center">🗜️</div><h3 class="mt-4 font-semibold text-[14px]">Compress PDF</h3><p class="mt-1 text-[12px] text-zinc-500">Reduce PDF file size</p></div>
+<div class="tool-card bg-white border border-zinc-100 rounded-[20px] p-5"><div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center">📝</div><h3 class="mt-4 font-semibold text-[14px]">Word to PDF</h3><p class="mt-1 text-[12px] text-zinc-500">Convert Word to PDF instantly</p></div>
 </div>
 
-<script src="script.js"></script>
+<div class="mt-14 mb-10"><h2 class="text-[22px] font-bold flex items-center gap-2"><span class="w-8 h-8 rounded-lg bg-green-100 text-green-600 flex items-center justify-center text-[14px]">📊</span> Excel & Word Tools</h2></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="tool-card bg-white border border-zinc-100 rounded-[20px] p-5"><div class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center">X</div><h3 class="mt-4 font-semibold text-[14px]">Excel to CSV</h3><p class="mt-1 text-[12px] text-zinc-500">Convert Excel sheets to CSV</p></div>
+<div class="tool-card bg-white border border-zinc-100 rounded-[20px] p-5"><div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center">W</div><h3 class="mt-4 font-semibold text-[14px]">Word Counter</h3><p class="mt-1 text-[12px] text-zinc-500">Count words, characters</p></div>
+<div class="tool-card bg-white border border-zinc-100 rounded-[20px] p-5"><div class="w-10 h-10 rounded-xl bg-yellow-100 flex items-center justify-center">📦</div><h3 class="mt-4 font-semibold text-[14px]">ZIP Tools</h3><p class="mt-1 text-[12px] text-zinc-500">Create and extract ZIP files</p></div>
+<div class="tool-card bg-white border border-zinc-100 rounded-[20px] p-5"><div class="w-10 h-10 rounded-xl bg-purple-100 flex items-center justify-center">🔒</div><h3 class="mt-4 font-semibold text-[14px]">Secure & Private</h3><p class="mt-1 text-[12px] text-zinc-500">All processing in your browser</p></div>
+</div>
+</section>
+
+<footer class="border-t border-zinc-100 py-10 text-center text-[12px] text-zinc-500">
+<div>© 2026 I Love Files - 100% Free Online File Suite. All files processed locally in your browser. No upload to server.</div>
+<div class="mt-2">Contact: chalaklarki007-coder.github.io/i-love-files | Made with ❤️ in Pakistan</div>
+</footer>
 </body>
 </html>
