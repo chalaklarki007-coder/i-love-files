@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlTag">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I LOVE FILES - All Tools in One Place</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body class="bg-gray-50">
+<!-- Header -->
+<header class="bg-white shadow p-4 flex justify-between items-center">
+  <h1 class="text-2xl font-bold">I <span class="text-red-500">?</span> FILES</h1>
+  <div>
+    <button onclick="setLang('en')" class="px-3 py-1 border rounded">English</button>
+    <button onclick="setLang('ur')" class="px-3 py-1 border rounded">????</button>
+  </div>
+</header>
+
+<!-- Hero -->
+<div class="text-center py-8">
+  <h2 id="hero_title" class="text-3xl font-bold">All Document Tools in One Place</h2>
+  <p id="hero_desc" class="text-gray-500 mt-2">PDF, Word, Excel, Image, ZIP - Sab kuch ek jagah</p>
+</div>
+
+<!-- Tools Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 max-w-6xl mx-auto">
+
+  <!-- PDF Tools -->
+  <div class="bg-white p-5 rounded-xl shadow">
+    <h3 class="font-bold mb-3" id="cat_pdf">PDF Tools</h3>
+    <input type="file" id="pdfFiles" multiple accept=".pdf" class="mb-2 w-full">
+    <button onclick="mergePDF()" class="w-full bg-black text-white py-2 rounded mb-2" id="btn_merge">Merge PDF</button>
+    <button onclick="splitPDF()" class="w-full bg-gray-800 text-white py-2 rounded mb-2">Split PDF</button>
+    <button onclick="rotatePDF()" class="w-full bg-gray-800 text-white py-2 rounded">Rotate PDF</button>
+  </div>
+
+  <!-- Image Tools -->
+  <div class="bg-white p-5 rounded-xl shadow">
+    <h3 class="font-bold mb-3" id="cat_img">Image Tools</h3>
+    <input type="file" id="imgFile" accept="image/*" class="mb-2 w-full">
+    <select id="imgFormat" class="w-full border p-2 rounded mb-2">
+      <option value="png">JPG ? PNG</option>
+      <option value="jpeg">PNG ? JPG</option>
+      <option value="webp">? WebP</option>
+    </select>
+    <button onclick="convertImage()" class="w-full bg-black text-white py-2 rounded mb-2" id="btn_convert">Convert</button>
+    <button onclick="compressImage()" class="w-full bg-gray-800 text-white py-2 rounded">Compress & Resize</button>
+  </div>
+
+  <!-- ZIP Tools -->
+  <div class="bg-white p-5 rounded-xl shadow">
+    <h3 class="font-bold mb-3">ZIP Tools</h3>
+    <input type="file" id="zipFiles" multiple class="mb-2 w-full">
+    <button onclick="createZIP()" class="w-full bg-black text-white py-2 rounded mb-2" id="btn_zip">Create ZIP</button>
+    <input type="file" id="unzipFile" accept=".zip" class="mb-2 w-full">
+    <button onclick="extractZIP()" class="w-full bg-gray-800 text-white py-2 rounded">Extract ZIP</button>
+  </div>
+
+  <!-- Excel/Word -->
+  <div class="bg-white p-5 rounded-xl shadow">
+    <h3 class="font-bold mb-3">Excel & Word Tools</h3>
+    <input type="file" id="excelFile" accept=".xlsx,.csv,.docx" class="mb-2 w-full">
+    <button onclick="excelToCSV()" class="w-full bg-black text-white py-2 rounded mb-2">Excel ? CSV</button>
+    <button onclick="wordToPDF()" class="w-full bg-gray-800 text-white py-2 rounded">Word ? PDF / TXT ? PDF</button>
+  </div>
+
+  <!-- Other Tools -->
+  <div class="bg-white p-5 rounded-xl shadow">
+    <h3 class="font-bold mb-3">Other Tools</h3>
+    <textarea id="qrText" placeholder="Text for QR Code" class="w-full border p-2 rounded mb-2"></textarea>
+    <button onclick="makeQR()" class="w-full bg-black text-white py-2 rounded mb-2">QR Generator</button>
+    <div id="qrcode" class="flex justify-center"></div>
+    <hr class="my-3">
+    <textarea id="wordCountText" placeholder="Paste text to count words" class="w-full border p-2 rounded"></textarea>
+    <p id="countResult" class="text-sm mt-1">Words: 0</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
